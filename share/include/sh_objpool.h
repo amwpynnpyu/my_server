@@ -129,12 +129,120 @@ public:
         return p;
     }
 
-    template<typename ... Params>
+    /*  template<typename ... Params>
     T* malloc(Params... args)
+    {
+    T* p = _mutex_malloc();
+    if (NULL == p)return p;
+    new(p)T(args...);
+    return p;
+    }*/
+
+    template<typename T1>
+    T* malloc(T1 t1)
     {
         T* p = _mutex_malloc();
         if (NULL == p)return p;
-        new(p)T(args...);
+        new(p)T(t1);
+        return p;
+    }
+
+    template<typename T1, typename T2>
+    T* malloc(T1 t1, T2 t2)
+    {
+        T* p = _mutex_malloc();
+        if (NULL == p)return p;
+        new(p)T(t1, t2);
+        return p;
+    }
+
+    template<typename T1, typename T2, typename T3>
+    T* malloc(T1 t1, T2 t2, T3 t3)
+    {
+        T* p = _mutex_malloc();
+        if (NULL == p)return p;
+        new(p)T(t1, t2, t3);
+        return p;
+    }
+
+    template<typename T1, typename T2, typename T3, typename T4>
+    T* malloc(T1 t1, T2 t2, T3 t3, T4 t4)
+    {
+        T* p = _mutex_malloc();
+        if (NULL == p)return p;
+        new(p)T(t1, t2, t3, t4);
+        return p;
+    }
+
+    template<typename T1, typename T2, typename T3, typename T4, typename T5>
+    T* malloc(T1 t1, T2 t2, T3 t3, T4 t4, T5 t5)
+    {
+        T* p = _mutex_malloc();
+        if (NULL == p)return p;
+        new(p)T(t1, t2, t3, t4, t5);
+        return p;
+    }
+
+    template<typename T1, typename T2, typename T3, typename T4, typename T5, typename T6>
+    T* malloc(T1 t1, T2 t2, T3 t3, T4 t4, T5 t5, T6 t6)
+    {
+        T* p = _mutex_malloc();
+        if (NULL == p)return p;
+        new(p)T(t1, t2, t3, t4, t5, t6);
+        return p;
+    }
+
+    template<typename T1, typename T2, typename T3, typename T4, typename T5, typename T6, typename T7>
+    T* malloc(T1 t1, T2 t2, T3 t3, T4 t4, T5 t5, T6 t6, T7 t7)
+    {
+        T* p = _mutex_malloc();
+        if (NULL == p)return p;
+        new(p)T(t1, t2, t3, t4, t5, t6, t7);
+        return p;
+    }
+
+    template<typename T1, typename T2, typename T3, typename T4, typename T5, typename T6, typename T7, typename T8>
+    T* malloc(T1 t1, T2 t2, T3 t3, T4 t4, T5 t5, T6 t6, T7 t7, T8 t8)
+    {
+        T* p = _mutex_malloc();
+        if (NULL == p)return p;
+        new(p)T(t1, t2, t3, t4, t5, t6, t7,t8);
+        return p;
+    }
+
+    template<typename T1, typename T2, typename T3, typename T4, typename T5, typename T6, typename T7, typename T8, typename T9>
+    T* malloc(T1 t1, T2 t2, T3 t3, T4 t4, T5 t5, T6 t6, T7 t7, T8 t8, T9 t9)
+    {
+        T* p = _mutex_malloc();
+        if (NULL == p)return p;
+        new(p)T(t1, t2, t3, t4, t5, t6, t7,t8,t9);
+        return p;
+    }
+
+    template<typename T1, typename T2, typename T3, typename T4, typename T5, typename T6, typename T7, typename T8, typename T9, typename T10>
+    T* malloc(T1 t1, T2 t2, T3 t3, T4 t4, T5 t5, T6 t6, T7 t7, T8 t8, T9 t9, T10 t10)
+    {
+        T* p = _mutex_malloc();
+        if (NULL == p)return p;
+        new(p)T(t1, t2, t3, t4, t5, t6, t7,t8,t9,t10);
+        return p;
+    }
+
+    template<typename T1, typename T2, typename T3, typename T4, typename T5, typename T6, typename T7, typename T8, typename T9, typename T10, typename T11>
+    T* malloc(T1 t1, T2 t2, T3 t3, T4 t4, T5 t5, T6 t6, T7 t7, T8 t8, T9 t9, T10 t10, T11 t11)
+    {
+        T* p = _mutex_malloc();
+        if (NULL == p)return p;
+        new(p)T(t1, t2, t3, t4, t5, t6, t7,t8,t9,t10,t11);
+        return p;
+    }
+
+    template<typename T1, typename T2, typename T3, typename T4, typename T5, typename T6, typename T7, typename T8, typename T9, typename T10, typename T11, typename T12>
+    T* malloc(T1 t1, T2 t2, T3 t3, T4 t4, T5 t5, T6 t6, T7 t7, T8 t8, T9 t9, T10 t10, T11 t11, T12 t12)
+    {
+        T* p = _mutex_malloc();
+        if (NULL == p)return p;
+        new(p)T(t1, t2, t3, t4, t5, t6, t7,t8,t9,t10,t11,t12);
         return p;
     }
 
