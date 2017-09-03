@@ -167,6 +167,7 @@
     <ClCompile Include="src\sh_net.cpp" />
     <ClCompile Include="src\sh_win_iocp.cpp" />
     <ClCompile Include="src\sh_win_sock.cpp" />
+    <ClCompile Include="src\sh_win_sock_mgr.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\sh_connector.h" />
@@ -174,6 +175,7 @@
     <ClInclude Include="src\sh_net.h" />
     <ClInclude Include="src\sh_win_iocp.h" />
     <ClInclude Include="src\sh_win_sock.h" />
+    <ClInclude Include="src\sh_win_sock_mgr.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

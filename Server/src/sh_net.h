@@ -193,6 +193,19 @@ public:
 */
 struct NetModuleCfg
 {
+    NetModuleCfg(){
+        a_net_packet_max_size = 102 * 1024;
+        net_packet_max_number = 10;
+        all_net_packets_max_size = 16 * 102 * 1024;
+        connection_pool_init_number = 1;
+        connector_pool_init_number = 1;
+        listener_pool_init_number = 1;
+        net_event_pool_init_number = 100;
+        net_req_pool_init_number = 100;
+        connect_req_pool_init_number = 10;
+        epoll_event_max_number = 100;
+        net_recv_send_thread_number = 1;
+    }
     uint32  a_net_packet_max_size;          //一个网络包的最大长度 (eg. 1024*64)
     uint32  net_packet_max_number;          //网络包缓冲池的个数,每个网络包的大少是 a_net_packet_max_size (eg.2),数量越多，越能减少取数据时加锁的次数。
     uint32  all_net_packets_max_size;       //接收该网络模块里所有连接的数据的网络缓冲区的最大长度 (eg. 1024*1024)，根据具体需要设置

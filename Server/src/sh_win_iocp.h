@@ -3,6 +3,9 @@
 
 #include "sh_net.h"
 #include "sh_common.h"
+#include "sh_ptrlist.h"
+#include "sh_connector.h"
+#include "sh_listener.h"
 
 class CWinIocpModule : public sh::INetModule, public sh::noncopyable
 {
@@ -61,6 +64,10 @@ public:
         );
 
     virtual bool  run();
+
+private:
+    sh::CPool<CConnector>   m_conter_pool;
+    sh::CPool<CListener>   m_listen_pool;
 };
 
 #endif //__SHARE_WIN_IOCP_H__

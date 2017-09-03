@@ -5,22 +5,13 @@
 #include "sh_net.h"
 
 
-class CSocket
+
+
+class CWinSocket : public sh::IConnection
 {
 public:
-    CSocket();
-    ~CSocket();
-
-private:
-    SOCKET   m_socket;
-};
-
-
-class CConnection : public sh::IConnection
-{
-public:
-    CConnection();
-    virtual ~CConnection();
+    CWinSocket();
+    virtual ~CWinSocket();
 
     //检查是否处于连接中
     virtual bool  is_connected(void);
@@ -56,7 +47,7 @@ public:
     virtual sh::uint16  get_local_port(void);
 
 private:
-    CSocket   m_socket;
+    SOCKET   m_socket;
 };
 
 
