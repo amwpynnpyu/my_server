@@ -69,6 +69,7 @@ int main()
    sh::CPool <SDbCfg>            m_DBEventPool; 
 	printf("\r\ncommon test-----------------------------------------------------\r\n");
 
+    //This is Test.
 	system("pause");
 
 	return 0;
