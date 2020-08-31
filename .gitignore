@@ -1,6 +1,7 @@
 
 *.tlog
 *.obj
+*.o
 *.exe
 *.ilk
 *.lastbuildstate
