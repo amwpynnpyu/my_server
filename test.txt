@@ -1,7 +1,7 @@
 wwwwwww 
 lix oooooxxx
 ppppplla a a lllll  This is a test file okok.
-Creating a new branch is quick and simple.
+Creating a delete branch is quick and simple.
 ooolalalal
 7777
 6666
@@ -10,5 +10,5 @@ aaaa
 oooiiii
 hao lala
 
-it is a new test...
+it is a delete test...
 lallaala
